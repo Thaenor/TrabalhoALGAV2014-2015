@@ -12,14 +12,14 @@ Deve incluir as seguintes funcionalidades:
 
 * Permitir a incorporação do conceito de horário de funcionamento, tempos de viagem entre estações e frequências,que podem variar de acordo com os atributos:
 
-* * dia / noite,
-* * dia útil / sábado / domingo.
+ * dia / noite,
+ * dia útil / sábado / domingo.
 
 *  Dada a hora de comparência numa dada estação determinar o trajeto para chegar a outra estação de acordo com diferentes critérios:
 
-* * Menostrocas
-* * Maisrápido
-* * Menorpercurso a pé, considerando as deslocações entre linhas dentro da mesma estação (valores estimados com base na representação gráfica da rede).
+ * Menostrocas
+ * Maisrápido
+ * Menor percurso a pé, considerando as deslocações entre linhas dentro da mesma estação (valores estimados com base na representação gráfica da rede).
 
 * Permitir a modelação de alguns pontos de interesse turísticos com a indicação de atributos como horário de funcionamento (dias e horas), tempo estimado de 
 visita, localização (estação ou estações de metro mais próximas).
