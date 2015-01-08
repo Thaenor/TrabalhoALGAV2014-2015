@@ -6,13 +6,39 @@
 
 %% 1. Rede de Metro
 %%% Linhas
-linha().
-linha().
+linha("1").
+linha("2").
+linha("3").
+linha("3bis").
+linha("4").
+linha("5").
+linha("6").
+linha("7").
+linha("7bis").
+linha("8").
+linha("9").
+linha("10").
+linha("11").
+linha("12").
+linha("13").
+linha("14").
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Estações
-estacao().
-estacao().
+%para linha 1
+estacao("la defense grande arche"). % 2 %
+estacao("charles de gaulle etoile"). %2 6%
+estacao("franklin d roosevelt"). %9 %
+estacao("champs elysees clemenceau	"). %13 %
+estacao("concorde"). %8 12 %
+estacao("palais royal musee du louvre	"). %7 %
+estacao("chatelet"). %4 7 11 14 %
+estacao("hotel de ville"). %11 %
+estacao("bastille bassin de larsenal"). %5 8 %
+estacao("gare de lyon"). %14 %
+estacao("reuilly diderot"). %8 %
+estacao("nation"). %2 6 9 %
+estacao("porte de vincennes"). %3a 3b %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Cruzamentos
