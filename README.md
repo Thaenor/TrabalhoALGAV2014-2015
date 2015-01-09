@@ -17,8 +17,8 @@ Deve incluir as seguintes funcionalidades:
 
 *  Dada a hora de comparência numa dada estação determinar o trajeto para chegar a outra estação de acordo com diferentes critérios:
 
- * Menostrocas
- * Maisrápido
+ * Menos trocas
+ * Mais rápido
  * Menor percurso a pé, considerando as deslocações entre linhas dentro da mesma estação (valores estimados com base na representação gráfica da rede).
 
 * Permitir a modelação de alguns pontos de interesse turísticos com a indicação de atributos como horário de funcionamento (dias e horas), tempo estimado de 
