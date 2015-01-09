@@ -6,39 +6,38 @@
 
 %% 1. Rede de Metro
 %%% Linhas
-linha("1").
-linha("2").
-linha("3").
-linha("3bis").
-linha("4").
-linha("5").
-linha("6").
-linha("7").
-linha("7bis").
-linha("8").
-linha("9").
-linha("10").
-linha("11").
-linha("12").
-linha("13").
-linha("14").
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+linha(1,['La Defense Grande Arche','Esplanade de la Defense','Pont de Neuilly','Les Sablons Jardin dAcclimatation','Porte Maillot Palais des Congres','Argentine','Charles de Gaulle — Etoile','George V','Franklin D. Roosevelt','Champs-Elysees — Clemenceau Grand Palais','Concorde','Tuileries','Palais Royal — Musee du Louvre','Louvre — Rivoli','Chatelet','Hotel de Ville','Saint-Paul Le Marais','Bastille','Gare de Lyon','Reuilly — Diderot','Nation','Porte de Vincennes','Saint-Mande','Berault','Chateau de Vincennes']).
 
-%%% Estações
-%para linha 1
-estacao("la defense grande arche"). % 2 %
-estacao("charles de gaulle etoile"). %2 6%
-estacao("franklin d roosevelt"). %9 %
-estacao("champs elysees clemenceau	"). %13 %
-estacao("concorde"). %8 12 %
-estacao("palais royal musee du louvre	"). %7 %
-estacao("chatelet"). %4 7 11 14 %
-estacao("hotel de ville"). %11 %
-estacao("bastille bassin de larsenal"). %5 8 %
-estacao("gare de lyon"). %14 %
-estacao("reuilly diderot"). %8 %
-estacao("nation"). %2 6 9 %
-estacao("porte de vincennes"). %3a 3b %
+linha(2,['Porte Dauphine – Marechal de Lattre de Tassigny','Victor Hugo','Charles de Gaulle — Etoile','Terne','Courcelle','Moncea','Villier','Rom','Place de Clichy','Blanch','Pigall','Anvers – Sacre Coeur','Barbes — Rochechouart','La Chapelle','Stalingrad','Jaures','Colonel Fabien','Belleville','Couronnes','Menilmontant','Pere Lachaise','Philippe Auguste','Alexandre Dumas','Avron','Nation']).
+
+linha(3,['Pont de Levallois — Becon','Anatole France','Louise Michel','Porte de Champerret','Pereire','Marechal Juin','Wagram','Malesherbes','Villiers','Europe','Saint-Lazare','Havre — Caumartin','Opera','Quatre-Septembre','Bourse','Sentier','Reaumur — Sebastopol','Arts et Metiers','Temple','Republique	','Parmentier	','Rue Saint-Maur','Pere Lachaise	','Gambetta	','Porte de Bagnolet','Gallieni']).
+
+linha(4,['Gambetta','Pelleport','Saint-Fargeau','Porte des Lilas']).
+
+
+
+linha(6,['Charles de Gaulle — Etoile','Kleber','Boissiere','Trocadero','Passy','Bir-Hakeim Tour Eiffel','Dupleix','La Motte-Picquet — Grenelle','Cambronne','Sevres — Lecourbe','Pasteur','Montparnasse — Bienvenue','Edgar Quinet','Raspail','Denfert-Rochereau','Saint-Jacques','Glaciere','Corvisart','Place dItalie','Nationale','Chevaleret','Quai de la Gare','Bercy','Dugommier','Daumesnil – Felix Eboue','Bel-Air','Picpus – Courteline','Nation']).
+
+linha(7,['La Courneuve — 8 Mai 1945','Fort d’Aubervilliers','Aubervilliers — Pantin — Quatre Chemins','Porte de la Villette – Cite des Sciences et de lIndustrie','Corentin Cariou','Crimee','Riquet','Stalingrad','Louis Blanc','Chateau-Landon','Gare de l’Est, Verdun','Poissonniere','Cadet','Le Peletier','Chaussee dAntin — La Fayette','Opera','Pyramides','Palais Royal — Musee du Louvre','Pont Neuf	1er,','Chatelet','Pont Marie – Cite des Arts','Sully — Morland','Jussieu','Place Monge Jardin des Plantes — Arenes de Lutece','Censier — Daubenton','Les Gobelins','Place dItalie','Tolbiac','Maison Blanche','Le Kremlin-Bicetre','Villejuif — Leo Lagrange','Villejuif — Paul Vaillant-Couturier — Hopital Paul Brousse','Villejuif — Louis Aragon','Porte dItalie','Porte de Choisy','Porte dIvry','Pierre et Marie Curie','Mairie dIvry']).
+
+
+linha(8,['Balard','Lourmel','Boucicaut','Felix Faure','Commerce','La Motte-Picquet — Grenelle	','Ecole Militaire','La Tour-Maubourg','Invalides','Concorde','Madeleine','Opera','Richelieu — Drouot','Grands Boulevards','Bonne Nouvelle','Strasbourg — Saint-Denis','Republique','Filles du Calvaire','Saint-Sebastien — Froissart','Chemin Vert','Bastille','Ledru-Rollin','Faidherbe — Chaligny','Reuilly — Diderot','Montgallet','Daumesnil – Felix Eboué','Michel Bizot','Porte Doree','Porte de Charenton','Liberte','Charenton — Ecoles – Place Aristide Briand','Ecole Veterinaire de Maisons-Alfort','Maisons-Alfort — Stade','Maisons-Alfort — Les Juilliottes','Creteil — LEchat Hopital Henri Mondor','Creteil — Universite','Creteil — Prefecture Hotel de Ville']).
+
+
+linha(9,['Pont de Sevres','Billancourt','Marcel Sembat','Porte de Saint-Cloud Parc des Princes','Exelmans','Michel-Ange — Molitor','Michel-Ange — Auteuil','Jasmin','Ranelagh','La Muette','Rue de la Pompe','Trocadero','Iena','Alma — Marceau','Franklin D Roosevelt','Saint-Philippe du Roule','Miromesnil','Saint-Augustin','Havre — Caumartin','Chaussee dAntin — La Fayette','Richelieu — Drouot','Grands Boulevards','Bonne Nouvelle','Strasbourg — Saint-Denis','Republique','Oberkampf','Saint-Ambroise','Voltaire – Leon Blum','Charonne','Rue des Boulets','Nation','Buzenval','Maraichers','Porte de Montreuil','Robespierre','Croix de Chavaux – Place Jacques Duclos','Mairie de Montreuil']).
+
+
+linha(10,['Boulogne — Pont de Saint-Cloud Rhin et Danube','Boulogne — Jean Jaures','Porte dAuteuil','Michel-Ange — Molitor','Michel-Ange — Auteuil','Chardon-Lagache','eglise dAuteuil','Mirabeau','Javel — Andre Citroen','Charles Michels	','Avenue emile Zola	','La Motte-Picquet — Grenelle	','Segur','Duroc','Vaneau','Sevres — Babylone','Mabillon','Odeon','Cluny — La Sorbonne','Maubert — Mutualite','Cardinal Lemoine','Jussieu','Gare dAusterlitz']).
+
+linha(11,['Chatelet','Hotel de Ville','Rambuteau – Centre Georges Pompidou','Arts et Metiers','Republique','Goncourt – Hopital Saint-Louis','Belleville','Pyrenees','Jourdain','Place des Fetes','Telegraphe','Porte des Lilas','Mairie des Lilas']).
+
+
+linha(12,['Porte de la Chapelle','Marx Dormoy','Marcadet — Poissonniers','Jules Joffrin','Lamarck — Caulaincourt','Abbesses – Butte Montmartre','Pigalle','Saint-Georges','Notre-Dame-de-Lorette','Trinite — dEstienne dOrves','Saint-Lazare','Madeleine','Concorde','Assemblee nationale','Solferino – Musee dOrsay','Rue du Bac','Sevres — Babylone','Rennes','Notre-Dame-des-Champs','Montparnasse — Bienvenue','Falguiere','Pasteur','Volontaires','Vaugirard – Adolphe Cherioux','Convention','Porte de Versailles Parc des Expositions de Paris','Corentin Celton','Mairie dIssy']).
+
+
+linha(13,['Asnieres — Gennevilliers Les Courtilles','Les Agnettes','Gabriel Peri','Mairie de Clichy	Clichy','Porte de Clichy','Brochant','Saint-Denis — Universite','Basilique de Saint-Denis – Hotel de Ville','Saint-Denis — Porte de Paris Stade de France','Carrefour Pleyel','Mairie de Saint-Ouen','Garibaldi','Porte de Saint-Ouen','Guy Moquet','La Fourche','Place de Clichy','Liege','Saint-Lazare','Miromesnil','Champs-elysees — Clemenceau Grand Palais','Invalides','Varenne','Saint-François-Xavier','Duroc','Montparnasse — Bienvenue','Gaite','Pernety','Plaisance','Porte de Vanves','Malakoff — Plateau de Vanves','Malakoff — Rue Etienne Dolet','Chatillon — Montrouge']).
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Cruzamentos
