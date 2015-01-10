@@ -28,4 +28,4 @@ linha(12,['Porte de la Chapelle','Marx Dormoy','Marcadet — Poissonniers','Jule
 
 linha(13,['Asnieres — Gennevilliers Les Courtilles','Les Agnettes','Gabriel Peri','Mairie de Clichy	Clichy','Porte de Clichy','Brochant','Saint-Denis — Universite','Basilique de Saint-Denis – Hotel de Ville','Saint-Denis — Porte de Paris Stade de France','Carrefour Pleyel','Mairie de Saint-Ouen','Garibaldi','Porte de Saint-Ouen','Guy Moquet','La Fourche','Place de Clichy','Liege','Saint-Lazare','Miromesnil','Champs-elysees — Clemenceau Grand Palais','Invalides','Varenne','Saint-François-Xavier','Duroc','Montparnasse — Bienvenue','Gaite','Pernety','Plaisance','Porte de Vanves','Malakoff — Plateau de Vanves','Malakoff — Rue Etienne Dolet','Chatillon — Montrouge']).
 
-linha(14, ['Saint-Lazare', 'Madeleine', 'Pyramides', 'Châtelet', 'Gare de Lyon', 'Bercy', 'Cour Saint-emilion', 'Bibliotheque François Mitterrand', 'Olympiades']).
+linha(14, ['Saint-Lazare','Madeleine','Pyramides','Châtelet','Gare de Lyon','Bercy','Cour Saint-emilion','Bibliotheque François Mitterrand','Olympiades']).
