@@ -31,3 +31,10 @@ usando o metro como meio de transporte.
 Este ficheiro deverá conter os trajetos a fazer e a estimativa das horas parciais e de termino da visita. 
 Deverão se fornecidos os locais de interesse que se deseja visitar, o local de inicio (que poderá ser um local de interesse ou uma estação de metro) e a hora 
 de inicio.
+
+
+
+##notas:##
+
+* Para simplificação da base de conhecimentos, não consideramos um ramo da linha 7 (Le Kremlin-Bicêtre a Villejuif — Louis Aragon)
+
