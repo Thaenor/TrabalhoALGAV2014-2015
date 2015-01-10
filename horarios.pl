@@ -68,8 +68,6 @@ horario(6,'Nation',5,30,0,41,0).
 %%linha 6 com sentido a 'Nation' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
 horario(6,'Nation',5,30,1,41,1).
 
-################################ PAREI AQUI. DAQUI PARA A FRENTE É PRECISO POR OS HORARIOS ###############################
-
 %% ## LINHA 7 ##
 %%linha 7 com sentido a 'La Courneuve — 8 Mai 1945' com inicio as 5h30 e fim as 0h27 em dias da semana e domingo.
 horario(7,'La Courneuve — 8 Mai 1945',5,30,0,27,0).

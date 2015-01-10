@@ -1,7 +1,7 @@
 % Trabalho Prático de ALGAV %
 % 	  Francisco Santos      %
 % 		  Rui Silva 		%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Base de conhecimento
 
 :- consult(horarios).

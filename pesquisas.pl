@@ -1,8 +1,3 @@
-/*includes*/
-:- consult(linhas).
-:- consult(horarios).
-:- consult(pontosInteresse).
-
 %%%%%%%% Algoritmos auxiliares %%%%%%%%
 
 %% Para criar e escrever em ficheiro
