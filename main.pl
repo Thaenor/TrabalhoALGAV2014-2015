@@ -9,4 +9,4 @@
 %:- consult(pdi).
 :- consult(pesquisas).
 :- consult(geradores).
-
+:- gera_cruzamentos.
