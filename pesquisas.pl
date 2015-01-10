@@ -2,14 +2,14 @@
 
 %% Para criar e escrever em ficheiro
 escreverFicheiro(NomeDoFicheiro,Conteudo):- 
-				open(’NomeDoFicheiro.txt’,write,Stream), 
-         		write(Stream,’Conteudo’),  nl(Stream), 
+				open(NomeDoFicheiro+'.txt',write,Stream), 
+         		write(Stream,Conteudo),  nl(Stream), 
          		close(Stream).
 
 %% Para adicionar conteudo a ficheiro existente
 adicionarAFicheiro(NomeDoFicheiro,Conteudo):- 
-				open(’NomeDoFicheiro.txt’,append,Stream), 
-         		write(Stream,’Conteudo’),  nl(Stream), 
+				open(NomeDoFicheiro+'.txt',append,Stream), 
+         		write(Stream,Conteudo),  nl(Stream), 
          		close(Stream).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -31,11 +31,11 @@ melhor([(X,EstX)|_],X,EstX).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Primeiro em Profundidade
-primeiroProfundidade(Orig,Dest,Perc):- primeiroProfundidade1([[Orig]],Dest,P), inverte(P,Perc).
+primeiroProfundidade(Orig,Dest,Perc):- primeiroProfundidade(Orig,Dest,[Orig],Perc).
 
-primeiroProfundidade1([Prim|Resto],Dest,Prim):- Prim=[Dest|_].
-primeiroProfundidade1([[Dest|T]|Resto],Dest,Perc):- !, primeiroProfundidade1(Resto,Dest,Perc).
-primeiroProfundidade1([[Ult|T]|Outros],Dest,Perc):-
+primeiroProfundidade([Prim|_],Dest,Prim):- Prim=[Dest|_].
+primeiroProfundidade([[Dest|_]|Resto],Dest,Perc):- !, primeiroProfundidade1(Resto,Dest,Perc).
+primeiroProfundidade([[Ult|T]|Outros],Dest,Perc):-
 		findall([Z,Ult|T],proximo_no(Ult,T,Z),Lista),
 		append(Lista,Outros,NPerc),
 		write('NPerc:'), write(NPerc),nl,
@@ -45,8 +45,8 @@ primeiroProfundidade1([[Ult|T]|Outros],Dest,Perc):-
 %% Primeiro em Largura
 primeiroLargura(Orig,Dest,Perc):- primeiroLargura1([[Orig]],Dest,P), inverte(P,Perc).
 
-primeiroLargura1([Prim|Resto],Dest,Prim):- Prim=[Dest|_].
-primeiroLargura1([[Dest|T]|Resto],Dest,Perc):- !, primeiroLargura1(Resto,Dest,Perc).
+primeiroLargura1([Prim|_],Dest,Prim):- Prim=[Dest|_].
+primeiroLargura1([[Dest|_]|Resto],Dest,Perc):- !, primeiroLargura1(Resto,Dest,Perc).
 primeiroLargura1([[Ult|T]|Outros],Dest,Perc):-
 		findall([Z,Ult|T],proximo_no(Ult,T,Z),Lista),
 		append(Outros,Lista,NPerc),
@@ -114,12 +114,14 @@ estimativa(C1,C2,Est):-
 		Est is sqrt(DX*DX+DY*DY).
 
 % estimativa(_,_,0). % para desprezar a heurística.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Executar 'gera_cruzamentos' antes disto.
 %% 3. Funcionalidades Rede de Metro
-menosTrocas(Origem,Destino,ListaTrajeto,CTrocas):-.
+%menosTrocas(Origem,Destino,ListaTrajeto,CTrocas):-.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+/*
 maisRapido(Origem,Destino,ListaTrajeto,CTempo):-.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -139,4 +141,4 @@ visitaDiaInteiro():-.
 %% 6. Visita Circular (Origem = Destino)
 %%% LocalInicial - pode ser local de interesse ou estação de metro.
 visitaCircular(LocalInicial, HoraInicial, ListaLocais, NomeDoFicheiro):-.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
