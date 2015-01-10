@@ -10,3 +10,4 @@
 :- consult(pesquisas).
 :- consult(geradores).
 :- gera_cruzamentos.
+:- gera_ligacoes.

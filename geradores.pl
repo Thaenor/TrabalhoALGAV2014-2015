@@ -13,3 +13,12 @@ cruzamento:-  linha(N1,LE1), linha(N2,LE2),
               LI \== [],
               assertz(cruza(N1,N2,LI)).
 
+
+conector(N,[]).
+conector(N,[H1,H2|T]):- assertz(liga(N,H1,H2)),
+					%write(liga(N,H1,H2)),
+					conector(N, [H2|T]).
+
+gera_ligacoes:- findall(_,ligador,_).
+ligador:- linha(N1,LE1),
+          conector(N1,LE1).
