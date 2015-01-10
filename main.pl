@@ -12,15 +12,15 @@ linha(2,['Porte Dauphine – Marechal de Lattre de Tassigny','Victor Hugo','Char
 
 linha(3,['Pont de Levallois — Becon','Anatole France','Louise Michel','Porte de Champerret','Pereire','Marechal Juin','Wagram','Malesherbes','Villiers','Europe','Saint-Lazare','Havre — Caumartin','Opera','Quatre-Septembre','Bourse','Sentier','Reaumur — Sebastopol','Arts et Metiers','Temple','Republique	','Parmentier	','Rue Saint-Maur','Pere Lachaise	','Gambetta	','Porte de Bagnolet','Gallieni']).
 
-linha(4,['Gambetta','Pelleport','Saint-Fargeau','Porte des Lilas']).
+linha(4,['Porte de Clignancourt','Simplon','Marcadet — Poissonniers','Château Rouge','Barbes — Rochechouart','Gare du Nord','Gare de lEst Verdun','Château d’Eau','Strasbourg — Saint-Denis','Reaumur — Sebastopol','etienne Marcel','Les Halles','Châtelet','Cite','Saint-Michel','Odeon','Saint-Germain-des-Pres','Saint-Sulpice','Saint-Placide','Montparnasse — Bienvenüe','Vavin','Raspail','Denfert-Rochereau Colonel Rol-Tanguy','Mouton-Duvernet','Alesia','Porte dOrleans – General Leclerc']).
 
-linha(5, ['Bobigny — Pablo Picasso Préfecture — Hôtel du Département','Bobigny — Pantin — Raymond Queneau	Bobigny','Église de Pantin','Hoche	Pantin','Porte de Pantin – Parc de la Villette','Ourcq','Laumière','Jaurès','Stalingrad','Gare du Nord','Gare de l’Est – Verdun','Jacques Bonsergent','République','Oberkampf','Richard-Lenoir','Bréguet — Sabin','Bastille','Quai de la Rapée','Gare d’Austerlitz','Saint-Marcel','Campo-Formio','Place d’Italie']).
+linha(5, ['Bobigny — Pablo Picasso Prefecture — Hôtel du Departement','Bobigny — Pantin — Raymond Queneau','Eglise de Pantin','Hoche	Pantin','Porte de Pantin – Parc de la Villette','Ourcq','Laumiere','Jaures','Stalingrad','Gare du Nord','Gare de l’Est – Verdun','Jacques Bonsergent','Republique','Oberkampf','Richard-Lenoir','Breguet — Sabin','Bastille','Quai de la Rapee','Gare d’Austerlitz','Saint-Marcel','Campo-Formio','Place dItalie']).
 
 linha(6,['Charles de Gaulle — Etoile','Kleber','Boissiere','Trocadero','Passy','Bir-Hakeim Tour Eiffel','Dupleix','La Motte-Picquet — Grenelle','Cambronne','Sevres — Lecourbe','Pasteur','Montparnasse — Bienvenue','Edgar Quinet','Raspail','Denfert-Rochereau','Saint-Jacques','Glaciere','Corvisart','Place dItalie','Nationale','Chevaleret','Quai de la Gare','Bercy','Dugommier','Daumesnil – Felix Eboue','Bel-Air','Picpus – Courteline','Nation']).
 
 linha(7,['La Courneuve — 8 Mai 1945','Fort d’Aubervilliers','Aubervilliers — Pantin — Quatre Chemins','Porte de la Villette – Cite des Sciences et de lIndustrie','Corentin Cariou','Crimee','Riquet','Stalingrad','Louis Blanc','Chateau-Landon','Gare de l’Est, Verdun','Poissonniere','Cadet','Le Peletier','Chaussee dAntin — La Fayette','Opera','Pyramides','Palais Royal — Musee du Louvre','Pont Neuf	1er,','Chatelet','Pont Marie – Cite des Arts','Sully — Morland','Jussieu','Place Monge Jardin des Plantes — Arenes de Lutece','Censier — Daubenton','Les Gobelins','Place dItalie','Tolbiac','Maison Blanche','Le Kremlin-Bicetre','Villejuif — Leo Lagrange','Villejuif — Paul Vaillant-Couturier — Hopital Paul Brousse','Villejuif — Louis Aragon','Porte dItalie','Porte de Choisy','Porte dIvry','Pierre et Marie Curie','Mairie dIvry']).
 
-linha(8,['Balard','Lourmel','Boucicaut','Felix Faure','Commerce','La Motte-Picquet — Grenelle	','Ecole Militaire','La Tour-Maubourg','Invalides','Concorde','Madeleine','Opera','Richelieu — Drouot','Grands Boulevards','Bonne Nouvelle','Strasbourg — Saint-Denis','Republique','Filles du Calvaire','Saint-Sebastien — Froissart','Chemin Vert','Bastille','Ledru-Rollin','Faidherbe — Chaligny','Reuilly — Diderot','Montgallet','Daumesnil – Felix Eboué','Michel Bizot','Porte Doree','Porte de Charenton','Liberte','Charenton — Ecoles – Place Aristide Briand','Ecole Veterinaire de Maisons-Alfort','Maisons-Alfort — Stade','Maisons-Alfort — Les Juilliottes','Creteil — LEchat Hopital Henri Mondor','Creteil — Universite','Creteil — Prefecture Hotel de Ville']).
+linha(8,['Balard','Lourmel','Boucicaut','Felix Faure','Commerce','La Motte-Picquet — Grenelle','Ecole Militaire','La Tour-Maubourg','Invalides','Concorde','Madeleine','Opera','Richelieu — Drouot','Grands Boulevards','Bonne Nouvelle','Strasbourg — Saint-Denis','Republique','Filles du Calvaire','Saint-Sebastien — Froissart','Chemin Vert','Bastille','Ledru-Rollin','Faidherbe — Chaligny','Reuilly — Diderot','Montgallet','Daumesnil – Felix Eboue','Michel Bizot','Porte Doree','Porte de Charenton','Liberte','Charenton — Ecoles – Place Aristide Briand','Ecole Veterinaire de Maisons-Alfort','Maisons-Alfort — Stade','Maisons-Alfort — Les Juilliottes','Creteil — LEchat Hopital Henri Mondor','Creteil — Universite','Creteil — Prefecture Hotel de Ville']).
 
 linha(9,['Pont de Sevres','Billancourt','Marcel Sembat','Porte de Saint-Cloud Parc des Princes','Exelmans','Michel-Ange — Molitor','Michel-Ange — Auteuil','Jasmin','Ranelagh','La Muette','Rue de la Pompe','Trocadero','Iena','Alma — Marceau','Franklin D Roosevelt','Saint-Philippe du Roule','Miromesnil','Saint-Augustin','Havre — Caumartin','Chaussee dAntin — La Fayette','Richelieu — Drouot','Grands Boulevards','Bonne Nouvelle','Strasbourg — Saint-Denis','Republique','Oberkampf','Saint-Ambroise','Voltaire – Leon Blum','Charonne','Rue des Boulets','Nation','Buzenval','Maraichers','Porte de Montreuil','Robespierre','Croix de Chavaux – Place Jacques Duclos','Mairie de Montreuil']).
 
@@ -32,7 +32,7 @@ linha(12,['Porte de la Chapelle','Marx Dormoy','Marcadet — Poissonniers','Jule
 
 linha(13,['Asnieres — Gennevilliers Les Courtilles','Les Agnettes','Gabriel Peri','Mairie de Clichy	Clichy','Porte de Clichy','Brochant','Saint-Denis — Universite','Basilique de Saint-Denis – Hotel de Ville','Saint-Denis — Porte de Paris Stade de France','Carrefour Pleyel','Mairie de Saint-Ouen','Garibaldi','Porte de Saint-Ouen','Guy Moquet','La Fourche','Place de Clichy','Liege','Saint-Lazare','Miromesnil','Champs-elysees — Clemenceau Grand Palais','Invalides','Varenne','Saint-François-Xavier','Duroc','Montparnasse — Bienvenue','Gaite','Pernety','Plaisance','Porte de Vanves','Malakoff — Plateau de Vanves','Malakoff — Rue Etienne Dolet','Chatillon — Montrouge']).
 
-linha(14, ['Saint-Lazare', 'Madeleine', 'Pyramides', 'Châtelet', 'Gare de Lyon', 'Bercy', 'Cour Saint-Émilion', 'Bibliothèque François Mitterrand', 'Olympiades']).
+linha(14, ['Saint-Lazare', 'Madeleine', 'Pyramides', 'Châtelet', 'Gare de Lyon', 'Bercy', 'Cour Saint-emilion', 'Bibliotheque François Mitterrand', 'Olympiades']).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +48,165 @@ direcao().
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% 2. Horarios
-horario().
+%%DESCRICAO
+%%horario(n_linha,estacao_destino/sentido,hora_abertura,minuto_abertura,hora_fecho,minuto_fecho,dia<0 para domingo,segunda,terca,quarta,quinta ou 1 para sexta e sabado>).
+
+%% ## LINHA 1 ##
+%%linha 1 com sentido a 'La Defense Grande Arche' com inicio as 5h30 e fim as 0h40 em dias da semana e domingo.
+horario(1,'La Defense Grande Arche',5,30,0,40,0).
+%%linha 1 com sentido a 'La Defense Grande Arche' com inicio as 5h30 e fim as 1h40 em dias de sexta e sabado.
+horario(1,'La Defense Grande Arche',5,30,1,40,1).
+
+%%linha 1 com sentido a 'Chateau de Vincennes' com inicio as 5h30 e fim as 0h40 em dias da semana e domingo.
+horario(1,'Chateau de Vincennes',5,30,0,40,0).
+%%linha 1 com sentido a 'Chateau de Vincennes' com inicio as 5h30 e fim as 1h40 em dias de sexta e sabado.
+horario(1,'Chateau de Vincennes',5,30,1,40,1).
+
+%% ## LINHA 2 ##
+%%linha 2 com sentido a 'Porte Dauphine – Marechal de Lattre de Tassigny' com inicio as 5h30 e fim as 0h40 em dias da semana e domingo.
+horario(2,'Porte Dauphine – Marechal de Lattre de Tassigny',5,30,0,40,0).
+%%linha 2 com sentido a 'Porte Dauphine – Marechal de Lattre de Tassigny' com inicio as 5h30 e fim as 1h40 em dias de sexta e sabado.
+horario(2,'Porte Dauphine – Marechal de Lattre de Tassigny',5,30,1,40,1).
+
+%%linha 2 com sentido a 'Nation' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(2,'Nation',5,30,0,42,0).
+%%linha 2 com sentido a 'Nation' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(2,'Nation',5,30,1,42,1).
+
+%% ## LINHA 3 ##
+%%linha 3 com sentido a 'Pont de Levallois — Becon' com inicio as 5h30 e fim as 0h45 em dias da semana e domingo.
+horario(3,'Pont de Levallois — Becon',5,30,0,45,0).
+%%linha 3 com sentido a 'Pont de Levallois — Becon' com inicio as 5h30 e fim as 1h45 em dias de sexta e sabado.
+horario(3,'Pont de Levallois — Becon',5,30,1,45,1).
+
+%%linha 3 com sentido a 'Gallieni' com inicio as 5h30 e fim as 0h44 em dias da semana e domingo.
+horario(3,'Gallieni',5,30,0,44,0).
+%%linha 3 com sentido a 'Gallieni' com inicio as 5h30 e fim as 1h44 em dias de sexta e sabado.
+horario(3,'Gallieni',5,30,1,44,1).
+
+%% ## LINHA 4 ##
+%%linha 4 com sentido a 'Porte de Clignancourt' com inicio as 5h30 e fim as 0h47 em dias da semana e domingo.
+horario(4,'Porte de Clignancourt',5,30,0,47,0).
+%%linha 4 com sentido a 'Porte de Clignancourt' com inicio as 5h30 e fim as 1h47 em dias de sexta e sabado.
+horario(4,'Porte de Clignancourt',5,30,1,47,1).
+
+%%linha 4 com sentido a 'Porte dOrleans – General Leclerc' com inicio as 5h30 e fim as 0h47 em dias da semana e domingo.
+horario(4,'Porte dOrleans – General Leclerc',5,30,0,47,0).
+%%linha 4 com sentido a 'Porte dOrleans – General Leclerc' com inicio as 5h30 e fim as 1h47 em dias de sexta e sabado.
+horario(4,'Porte dOrleans – General Leclerc',5,30,1,47,1).
+
+%% ## LINHA 5 ##
+%%linha 5 com sentido a 'Bobigny — Pablo Picasso Prefecture — Hôtel du Departement' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(5,'Bobigny — Pablo Picasso Prefecture — Hôtel du Departement',5,30,0,42,0).
+%%linha 5 com sentido a 'Bobigny — Pablo Picasso Prefecture — Hôtel du Departement' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(5,'Bobigny — Pablo Picasso Prefecture — Hôtel du Departement',5,30,1,42,1).
+
+%%linha 5 com sentido a 'Place dItalie' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(5,'Place dItalie',5,30,0,41,0).
+%%linha 5 com sentido a 'Place dItalie' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(5,'Place dItalie',5,30,1,41,1).
+
+################################ PAREI AQUI. DAQUI PARA A FRENTE É PRECISO POR OS HORARIOS ###############################
+
+%% ## LINHA 6 ##
+%%linha 6 com sentido a 'Charles de Gaulle — Etoile' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(6,'Charles de Gaulle — Etoile',5,30,0,42,0).
+%%linha 6 com sentido a 'Charles de Gaulle — Etoile' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(6,'Charles de Gaulle — Etoile',5,30,1,42,1).
+
+%%linha 6 com sentido a 'Nation' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(6,'Nation',5,30,0,41,0).
+%%linha 6 com sentido a 'Nation' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(6,'Nation',5,30,1,41,1).
+
+%% ## LINHA 7 ##
+%%linha 7 com sentido a 'La Courneuve — 8 Mai 1945' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(7,'La Courneuve — 8 Mai 1945',5,30,0,42,0).
+%%linha 7 com sentido a 'La Courneuve — 8 Mai 1945' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(7,'La Courneuve — 8 Mai 1945',5,30,1,42,1).
+
+%%linha 7 com sentido a 'Mairie dIvry' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(7,'Mairie dIvry',5,30,0,41,0).
+%%linha 7 com sentido a 'Mairie dIvry' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(7,'Mairie dIvry',5,30,1,41,1).
+
+%% ## LINHA 8 ##
+%%linha 8 com sentido a 'Balard' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(8,'Balard',5,30,0,42,0).
+%%linha 8 com sentido a 'Balard' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(8,'Balard',5,30,1,42,1).
+
+%%linha 8 com sentido a 'Creteil — Prefecture Hotel de Ville' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(8,'Creteil — Prefecture Hotel de Ville',5,30,0,41,0).
+%%linha 8 com sentido a 'Creteil — Prefecture Hotel de Ville' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(8,'Creteil — Prefecture Hotel de Ville',5,30,1,41,1).
+
+%% ## LINHA 9 ##
+%%linha 9 com sentido a 'Pont de Sevres' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(9,'Pont de Sevres',5,30,0,42,0).
+%%linha 9 com sentido a 'Pont de Sevres' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(9,'Pont de Sevres',5,30,1,42,1).
+
+%%linha 9 com sentido a 'Mairie de Montreuil' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(9,'Mairie de Montreuil',5,30,0,41,0).
+%%linha 9 com sentido a 'Mairie de Montreuil' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(9,'Mairie de Montreuil',5,30,1,41,1).
+
+%% ## LINHA 10 ##
+%%linha 10 com sentido a 'Boulogne — Pont de Saint-Cloud Rhin et Danube' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(10,'Boulogne — Pont de Saint-Cloud Rhin et Danube',5,30,0,42,0).
+%%linha 10 com sentido a 'Boulogne — Pont de Saint-Cloud Rhin et Danube' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(10,'Boulogne — Pont de Saint-Cloud Rhin et Danube',5,30,1,42,1).
+
+%%linha 10 com sentido a 'Gare dAusterlitz' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(10,'Gare dAusterlitz',5,30,0,41,0).
+%%linha 10 com sentido a 'Gare dAusterlitz' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(10,'Gare dAusterlitz',5,30,1,41,1).
+
+%% ## LINHA 11 ##
+%%linha 11 com sentido a 'Chatelet' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(11,'Chatelet',5,30,0,42,0).
+%%linha 11 com sentido a 'Chatelet' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(11,'Chatelet',5,30,1,42,1).
+
+%%linha 11 com sentido a 'Mairie des Lilas' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(11,'Mairie des Lilas',5,30,0,41,0).
+%%linha 11 com sentido a 'Mairie des Lilas' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(11,'Mairie des Lilas',5,30,1,41,1).
+
+%% ## LINHA 12 ##
+%%linha 12 com sentido a 'Porte de la Chapelle' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(12,'Porte de la Chapelle',5,30,0,42,0).
+%%linha 12 com sentido a 'Porte de la Chapelle' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(12,'Porte de la Chapelle',5,30,1,42,1).
+
+%%linha 12 com sentido a 'Mairie dIssy' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(12,'Mairie dIssy',5,30,0,41,0).
+%%linha 12 com sentido a 'Mairie dIssy' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(12,'Mairie dIssy',5,30,1,41,1).
+
+%% ## LINHA 13 ##
+%%linha 13 com sentido a 'Asnieres — Gennevilliers Les Courtilles' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(13,'Asnieres — Gennevilliers Les Courtilles',5,30,0,42,0).
+%%linha 13 com sentido a 'Asnieres — Gennevilliers Les Courtilles' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(13,'Asnieres — Gennevilliers Les Courtilles',5,30,1,42,1).
+
+%%linha 13 com sentido a 'Chatillon — Montrouge' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(13,'Chatillon — Montrouge',5,30,0,41,0).
+%%linha 13 com sentido a 'Chatillon — Montrouge' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(13,'Chatillon — Montrouge',5,30,1,41,1).
+
+%% ## LINHA 14 ##
+%%linha 14 com sentido a 'Saint-Lazare' com inicio as 5h30 e fim as 0h42 em dias da semana e domingo.
+horario(14,'Saint-Lazare',5,30,0,42,0).
+%%linha 14 com sentido a 'Saint-Lazare' com inicio as 5h30 e fim as 1h42 em dias de sexta e sabado.
+horario(14,'Saint-Lazare',5,30,1,42,1).
+
+%%linha 14 com sentido a 'Olympiades' com inicio as 5h30 e fim as 0h41 em dias da semana e domingo.
+horario(14,'Olympiades',5,30,0,41,0).
+%%linha 14 com sentido a 'Olympiades' com inicio as 5h30 e fim as 1h41 em dias de sexta e sabado.
+horario(14,'Olympiades',5,30,1,41,1).
+
 horario().
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
