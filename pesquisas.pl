@@ -31,11 +31,11 @@ melhor([(X,EstX)|_],X,EstX).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Primeiro em Profundidade
-primeiroProfundidade(Orig,Dest,Perc):- primeiroProfundidade(Orig,Dest,[Orig],Perc).
+primeiroProfundidade(Orig,Dest,Perc):- primeiroProfundidade([[Orig]],Dest,P), inverte(P,Perc).
 
-primeiroProfundidade([Prim|_],Dest,Prim):- Prim=[Dest|_].
-primeiroProfundidade([[Dest|_]|Resto],Dest,Perc):- !, primeiroProfundidade1(Resto,Dest,Perc).
-primeiroProfundidade([[Ult|T]|Outros],Dest,Perc):-
+primeiroProfundidade1([Prim|_],Dest,Prim):- Prim=[Dest|_].
+primeiroProfundidade1([[Dest|_]|Resto],Dest,Perc):- !, primeiroProfundidade1(Resto,Dest,Perc).
+primeiroProfundidade1([[Ult|T]|Outros],Dest,Perc):-
 		findall([Z,Ult|T],proximo_no(Ult,T,Z),Lista),
 		append(Lista,Outros,NPerc),
 		write('NPerc:'), write(NPerc),nl,
@@ -43,15 +43,17 @@ primeiroProfundidade([[Ult|T]|Outros],Dest,Perc):-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Primeiro em Largura
-primeiroLargura(Orig,Dest,Perc):- primeiroLargura1([[Orig]],Dest,P), inverte(P,Perc).
+
+primeiroLargura(Orig,Dest,Perc):- primeiroLargura1([Orig],Dest,P), inverte(P,Perc).
 
 primeiroLargura1([Prim|_],Dest,Prim):- Prim=[Dest|_].
 primeiroLargura1([[Dest|_]|Resto],Dest,Perc):- !, primeiroLargura1(Resto,Dest,Perc).
-primeiroLargura1([[Ult|T]|Outros],Dest,Perc):-
-		findall([Z,Ult|T],proximo_no(Ult,T,Z),Lista),
-		append(Outros,Lista,NPerc),
-		write('NPerc:'), write(NPerc),nl,
-		primeiroLargura1(NPerc,Dest,Perc).
+
+primeiroLargura1([[H|T]|Outros],Dest,Perc):-
+		findall([X,H|T],
+		proximo_no(H,T,X),Novos),
+		append(Outros,Novos,Todos),
+		primeiroLargura1(Todos,Dest,Perc).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Primeiro o Melhor
@@ -119,7 +121,28 @@ estimativa(C1,C2,Est):-
 
 % Executar 'gera_cruzamentos' antes disto.
 %% 3. Funcionalidades Rede de Metro
-%menosTrocas(Origem,Destino,ListaTrajeto,CTrocas):-.
+
+indexOf([Element|_], Element, 0):- !.
+indexOf([_|Tail], Element, Index):-
+  indexOf(Tail, Element, Index1),
+  !,
+  Index is Index1+1.
+
+% 1.18 (**):  Extract a slice from a list
+% slice(L1,I,K,L2) :- L2 is the list of the elements of L1 between
+%    index I and index K (both included).
+%    (list,integer,integer,list) (?,+,+,?)
+slice([X|_],1,1,[X]).
+slice([X|Xs],1,K,[X|Ys]) :- K > 1, 
+   K1 is K - 1, slice(Xs,1,K1,Ys).
+slice([_|Xs],I,K,Ys) :- I > 1, 
+   I1 is I - 1, K1 is K - 1, slice(Xs,I1,K1,Ys).
+
+innerList(Orig,Dest,List,Perc):-indexOf(List,Orig,I),indexOf(List,Dest,K),IF is I + 1, KF is K + 1, (slice(List,IF,KF,Perc);slice(List,KF,IF,Perc)),!.
+
+
+menosTrocas(Orig,Dest,Caminho,CTrocas):-(linha(_,X),member(Orig,X),member(Dest,X),innerList(Orig,Dest,X,Caminho),CTrocas is 0).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 /*
 maisRapido(Origem,Destino,ListaTrajeto,CTempo):-.
