@@ -6,8 +6,7 @@
 
 :- consult(horarios).
 :- consult(linhas).
-:- consult(pdi).
+%:- consult(pdi).
 :- consult(pesquisas).
 :- consult(geradores).
 
-generate_line_intersections.

@@ -2,13 +2,14 @@
 gera interseccoes entre linhas
 */
 
-generate_line_intersections:- 
-		findall(_,line_intersection_generation,_).
-line_intersection_generation:-
-		line(N1,_,List1,_,_,_,_),
-		line(N2,_,List2,_,_,_,_),
-		N1 \== N2,
-		intersection(List1,List2,Result),
-		Result \== [],
-		not(line_intersection(N1,N2,_)),
-		assertz(line_intersection(N1,N2,Result)).
+interseccao([],_,[]).
+interseccao([X|R],Y,[X|Z]):-member(X,Y),!,interseccao(R,Y,Z).
+interseccao([_|R],Y,Z):-interseccao(R,Y,Z).
+
+gera_cruzamentos:- findall(_,cruzamento,_).
+cruzamento:-  linha(N1,LE1), linha(N2,LE2),
+              N1 \== N2,
+              interseccao(LE1,LE2,LI),
+              LI \== [],
+              assertz(cruza(N1,N2,LI)).
+
