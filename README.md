@@ -36,5 +36,6 @@ de inicio.
 
 ##notas:##
 
-* Para simplificação da base de conhecimentos, não consideramos um ramo da linha 7 (Le Kremlin-Bicêtre a Villejuif — Louis Aragon)
-
+Para simplificação da base de conhecimentos:
+* não consideramos um ramo da linha 7 (Le Kremlin-Bicêtre a Villejuif — Louis Aragon)
+* não consideramos um ramo da linha 13 (Guy Môquet a St. Dennis Université)
