@@ -119,9 +119,6 @@ estimativa(C1,C2,Est):-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Executar 'gera_cruzamentos' antes disto.
-%% 3. Funcionalidades Rede de Metro
-
 indexOf([Element|_], Element, 0):- !.
 indexOf([_|Tail], Element, Index):-
   indexOf(Tail, Element, Index1),
@@ -145,28 +142,15 @@ innerList(Orig,Dest,List,Perc):-
 				(slice(List,IF,KF,Perc);slice(List,KF,IF,Perc)),!.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%menosTrocas('La Defense Grande Arche','Charles de Gaulle - Etoile',C,Trocas).
-%menosTrocas(Orig,Dest,Caminho,CTrocas):-(linha(_,X),member(Orig,X),member(Dest,X),innerList(Orig,Dest,X,Caminho),CTrocas is 0).
-
-maisRapido(Orig,Dest,Caminho):-maisRapido2(Dest,[[Orig]],Caminho);maisRapido2(Orig,[[Dest]],Caminho).
-
-maisRapido2(Dest,[[Dest|T]|_],Cam):-reverse([Dest|T],Cam),escreverFicheiro('maisRapido.txt',Cam).
-
-maisRapido2(Dest,[[H|T]|Outros],Cam):-
-					findall([X,H|T],
-						(Dest\==H,
-							(
-								liga(_,H,X);
-								liga(_,X,H)
-							),
-							not(member(X,[H|T]))),
-						Novos),
-					append(Outros,Novos,Todos),
-					%write(Todos),nl,
-					maisRapido2(Dest,Todos,Cam).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1. Ficheiro das linhas
+% 2. Ficheiro dos horarios
+% 3.
+%a) Menos Trocas
+% Nota: incompleto.
+% Exemplo: menosTrocas('La Defense Grande Arche','Bourse',C,X).
+% prototipo da mesma linha: 
+menosTrocas(Orig,Dest,Caminho,CTrocas):-(linha(_,X),member(Orig,X),member(Dest,X),
+	innerList(Orig,Dest,X,Caminho),CTrocas is 0),!,escreverFicheiro('MenorTrocas.txt',(Caminho,CTrocas)).
 
 menosTrocas(Orig,Dest,Caminho,CTrocas):-menosTrocas2(Dest,[[Orig]],Caminho,0,CTrocas).
 
@@ -186,8 +170,31 @@ menosTrocas2(Dest,[[H|T]|Outros],Cam,LAnterior,CTrocas):-
 					append(Outros,Novos,Todos),
 					%write(Todos),nl,
 					menosTrocas2(Dest,Todos,Cam,LAtual,CTrocasAtual).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% b)
+% Exemplo: maisRapido('La Defense Grande Arche','Bourse',Caminho).
+maisRapido(Orig,Dest,Caminho):-maisRapido2(Dest,[[Orig]],Caminho);maisRapido2(Orig,[[Dest]],Caminho).
+
+maisRapido2(Dest,[[Dest|T]|_],Cam):-reverse([Dest|T],Cam),escreverFicheiro('maisRapido.txt',Cam).
+
+maisRapido2(Dest,[[H|T]|Outros],Cam):-
+					findall([X,H|T],
+						(Dest\==H,
+							(
+								liga(_,H,X);
+								liga(_,X,H)
+							),
+							not(member(X,[H|T]))),
+						Novos),
+					append(Outros,Novos,Todos),
+					%write(Todos),nl,
+					maisRapido2(Dest,Todos,Cam).
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%4) Ficheiro pdi.pl
+%5)
 %visitaDiaInteiro(['Pyramides','Bastille','Grande Arche'],Caminho).
 visitaDiaInteiro(LPDI,Caminho):-visitaMeioDia2(LPDI,Caminho),!,escreverFicheiro('visitaMeioDia.txt',Caminho).
 
@@ -248,20 +255,15 @@ subset([H|T],List) :-
     subset(T,List).
 
 :-dynamic cruza/3, estacoes/1, estacao_linhas/2.
-% este gera_caminho é capaz de gerar o caminho entre duas estações que servem de cruzamento entre linhas.
-gera_caminho(E1,E2,LC):- 
-			estacao_linhas(E1,LE1),
-			estacao_linhas(E2,LE2),
-			caminho(E1, LE1, E2, LE2,[],LC).
+%% Gera caminho (estacao1,estacao2,linha)
+%
+gera_caminho(E1,E2,LC):-estacao_linhas(E1,LE1),estacao_linhas(E2,LE2),caminho(E1,LE1,E2,LE2,[],LC).
 
-caminho(E1,LE1,E2,LE2,_,[(E1,E2,Linha)]):-
-				intersecao(LE1,LE2,LC),
-				member(Linha,LC),!.
 
-caminho(E1,LE1,E2,LE2,LLV,[(E1,EI,Linha)|LC]):-
-				member(Linha,LE1),
-				(not(member(Linha,LE1))),
-				cruza(Linha,_,L),
-				member(EI,L),
-				estacao_linhas(EI,LEI),
-				caminho(EI,LEI,E2,LE2,[Linha|LLV],LC).
+caminho(E1,LE1,E2,LE2,_,[(E1,E2,Linha)]):-intersecao(LE1,LE2,[H|T]),member(Linha,[H|T]),!.
+caminho(E1,LE1,E2,LE2,LLV,[(E1,EI,Linha)|LC]):-member(Linha,LE1),
+					(not(member(Linha,LLV))),
+					cruza(Linha,_,L),
+					member(EI,L),
+					estacao_linhas(EI,LEI),
+					caminho(EI,LEI,E2,LE2,[Linha|LLV],LC).

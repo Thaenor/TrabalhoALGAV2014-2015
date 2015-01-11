@@ -3,8 +3,8 @@ gera interseccoes entre linhas
 */
 
 intersecao([],_,[]).
-intersecao([X|R],Y,[X|Z]):-member(X,Y),!,intersecao(R,Y,Z).
-intersecao([_|R],Y,Z):-intersecao(R,Y,Z).
+intersecao([X|L],L1,[X|L2]):-member(X,L1),!,intersecao(L,L1,L2).
+intersecao([_|L],L1,L2):-intersecao(L,L1,L2).
 
 gera_cruzamentos:- findall(_,cruzamento,_).
 cruzamento:-  linha(N1,LE1), linha(N2,LE2),
