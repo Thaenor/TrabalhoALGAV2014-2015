@@ -147,7 +147,7 @@ innerList(Orig,Dest,List,Perc):-
 % 3.
 %a) Menos Trocas
 % Nota: incompleto.
-% Exemplo: menosTrocas('La Defense Grande Arche','Bourse',C,X).
+% Exemplo: menosTrocas('La Defense Grande Arche','Nation',C,X).
 % prototipo da mesma linha: 
 menosTrocas(Orig,Dest,Caminho,CTrocas):-(linha(_,X),member(Orig,X),member(Dest,X),
 	innerList(Orig,Dest,X,Caminho),CTrocas is 0),!,escreverFicheiro('MenorTrocas.txt',(Caminho,CTrocas)).
