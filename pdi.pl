@@ -1,5 +1,5 @@
 % 4. Pontos de interesse
-/*ponto de interesse pdi(estacaoEmQueSeEncontra, nomeDoPontoDeInteresse).*/
+/*ponto de interesse pdi(estacaoEmQueSeEncontra, nomeDoPontoDeInteresse,horaAbertura,minutoAbertura,horaFecho,minutoFecho).*/
 %linha 1
 pdi('La Defense Grande Arche','Grande Arche',8,0,20,0).
 pdi('Palais Royal - Musee du Louvre','Musee du Louvre',8,0,20,0).

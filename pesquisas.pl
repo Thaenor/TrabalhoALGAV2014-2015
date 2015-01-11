@@ -145,23 +145,29 @@ innerList(Orig,Dest,List,Perc):-
 				indexOf(List,Dest,K),IF is I + 1, KF is K + 1,
 				(slice(List,IF,KF,Perc);slice(List,KF,IF,Perc)),!.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %menosTrocas('La Defense Grande Arche','Charles de Gaulle - Etoile',C,Trocas).
 %menosTrocas(Orig,Dest,Caminho,CTrocas):-(linha(_,X),member(Orig,X),member(Dest,X),innerList(Orig,Dest,X,Caminho),CTrocas is 0).
 
-maisRapido(Orig,Dest,Caminho):-maisRapido2(Dest,[[Orig]],Caminho).
+maisRapido(Orig,Dest,Caminho):-maisRapido2(Dest,[[Orig]],Caminho);maisRapido2(Orig,[[Dest]],Caminho).
 
-maisRapido2(Dest,[[Dest|T]|_],Cam):-reverse([Dest|T],Cam),escreverFicheiro('maisRapido.txt',Cam),!.
+maisRapido2(Dest,[[Dest|T]|_],Cam):-reverse([Dest|T],Cam),escreverFicheiro('maisRapido.txt',Cam).
 
 maisRapido2(Dest,[[H|T]|Outros],Cam):-
 					findall([X,H|T],
 						(Dest\==H,
-							liga(_,H,X),
+							(
+								liga(_,H,X);
+								liga(_,X,H)
+							),
 							not(member(X,[H|T]))),
 						Novos),
 					append(Outros,Novos,Todos),
 					%write(Todos),nl,
 					maisRapido2(Dest,Todos,Cam).
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 menosTrocas(Orig,Dest,Caminho,CTrocas):-menosTrocas2(Dest,[[Orig]],Caminho,0,CTrocas).
 
@@ -177,14 +183,66 @@ menosTrocas2(Dest,[[H|T]|Outros],Cam,LAnterior,CTrocas):-
 					%write(Todos),nl,
 					menosTrocas2(Dest,Todos,Cam,LAtual,CTrocasAtual).
 
-visitaMeioDia(LPDI,Orig,Dest,Caminho):-
-		maisRapido(Orig,Dest,Caminho),
-		subset(LPDI,Caminho),!.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%visitaDiaInteiro(['Pyramides','Bastille','Grande Arche'],Caminho).
+visitaDiaInteiro(LPDI,Caminho):-visitaMeioDia2(LPDI,Caminho),!,escreverFicheiro('visitaMeioDia.txt',Caminho).
+
+visitaMeioDia2(LPDI,Caminho):-
+		estacoesPDI(LPDI,Estacoes),
+		my_first(Orig,Estacoes),
+		my_last(Dest,Estacoes),
+		visitaMeioDia3(Estacoes,[],Caminho).
+
+visitaMeioDia3([_|[]],Caminho,Caminho).
+visitaMeioDia3([Est1, Est2|T],Temp,Caminho):-
+		(
+			subset([Est1,Est2|T],Temp),
+			visitaMeioDia3([_|[]],Temp,Caminho)
+		);
+		(
+			maisRapido(Est1,Est2,C),!,
+			append(Temp,C,Temp2),
+			visitaMeioDia3([Est2|T],Temp2,Caminho)
+		).
+		
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+my_first(X,[X]).
+my_first(X,[X|_]).
+my_last(X,[X]).
+my_last(X,[_|L]) :- my_last(X,L).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1.26 (**):  Generate the combinations of k distinct objects
+%            chosen from the n elements of a list.
+
+% combination(K,L,C) :- C is a list of K distinct elements 
+%    chosen from the list L
+
+combination(E,O,D):-combination(2,E,[O|D]).
+
+combination(0,_,[]).
+combination(K,L,[X|Xs]) :- K > 0,
+   el(X,L,R), K1 is K-1, combination(K1,R,Xs).
+
+% Find out what the following predicate el/3 exactly does.
+
+el(X,[X|L],L).
+el(X,[_|L],R) :- el(X,L,R).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% devolve uma lista de todas as estacoes que correspondem a lista de todos os pontos de interesse.
+estacoesPDI(LPDI,Estacoes):-estacoesPDI(LPDI,[],Estacoes).
+
+estacoesPDI([],X,X).
+
+estacoesPDI([H|T],LVisitadas,Estacoes):-
+		pdi(E,H,_,_,_,_), % busca a estacao que tem o ponto de interesse
+		(not(member(E,LVisitadas))), % verifica se a estacao faz parte das estacoes já pesquisadas
+		estacoesPDI(T,[E|LVisitadas],Estacoes).
 
 subset([ ],_).
 subset([H|T],List) :-
-	pdi(X|H,_,_), % busca a estacao que tem o ponto de interesse
-    member(X,List), % verifica se a estacao existe na lista de estacoes que pertence ao percurso
+    member(H,List), % verifica se a estacao existe na lista de estacoes que pertence ao percurso
     subset(T,List).
 
 :-dynamic cruza/3, estacoes/1, estacao_linhas/2.
