@@ -177,6 +177,15 @@ menosTrocas2(Dest,[[H|T]|Outros],Cam,LAnterior,CTrocas):-
 					%write(Todos),nl,
 					menosTrocas2(Dest,Todos,Cam,LAtual,CTrocasAtual).
 
+visitaMeioDia(LPDI,Orig,Dest,Caminho):-
+		maisRapido(Orig,Dest,Caminho),
+		subset(LPDI,Caminho),!.
+
+subset([ ],_).
+subset([H|T],List) :-
+	pdi(X|H,_,_), % busca a estacao que tem o ponto de interesse
+    member(X,List), % verifica se a estacao existe na lista de estacoes que pertence ao percurso
+    subset(T,List).
 
 :-dynamic cruza/3, estacoes/1, estacao_linhas/2.
 % este gera_caminho é capaz de gerar o caminho entre duas estações que servem de cruzamento entre linhas.
