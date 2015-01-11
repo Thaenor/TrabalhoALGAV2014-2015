@@ -2,13 +2,13 @@
 
 %% Para criar e escrever em ficheiro
 escreverFicheiro(NomeDoFicheiro,Conteudo):- 
-				open(NomeDoFicheiro+'.txt',write,Stream), 
+				open(NomeDoFicheiro,write,Stream), 
          		write(Stream,Conteudo),  nl(Stream), 
          		close(Stream).
 
 %% Para adicionar conteudo a ficheiro existente
 adicionarAFicheiro(NomeDoFicheiro,Conteudo):- 
-				open(NomeDoFicheiro+'.txt',append,Stream), 
+				open(NomeDoFicheiro,append,Stream), 
          		write(Stream,Conteudo),  nl(Stream), 
          		close(Stream).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,7 +16,7 @@ adicionarAFicheiro(NomeDoFicheiro,Conteudo):-
 % Algoritmos de pesquisa
 
 %%%%%%%% Algoritmos auxiliares %%%%%%%%
-proximo_no(X,T,Z):- liga(X,Z), \+ member(Z,T).
+proximo_no(L,X,T,Z):- liga(L,X,Z), \+ member(Z,T).
 
 proximo_no(X,T,Z,C):- liga(X,Z,C), \+ member(Z,T).
 
@@ -129,19 +129,74 @@ indexOf([_|Tail], Element, Index):-
   Index is Index1+1.
 
 % 1.18 (**):  Extract a slice from a list
+
 % slice(L1,I,K,L2) :- L2 is the list of the elements of L1 between
 %    index I and index K (both included).
 %    (list,integer,integer,list) (?,+,+,?)
+
 slice([X|_],1,1,[X]).
 slice([X|Xs],1,K,[X|Ys]) :- K > 1, 
    K1 is K - 1, slice(Xs,1,K1,Ys).
 slice([_|Xs],I,K,Ys) :- I > 1, 
    I1 is I - 1, K1 is K - 1, slice(Xs,I1,K1,Ys).
 
-innerList(Orig,Dest,List,Perc):-indexOf(List,Orig,I),indexOf(List,Dest,K),IF is I + 1, KF is K + 1, (slice(List,IF,KF,Perc);slice(List,KF,IF,Perc)),!.
+innerList(Orig,Dest,List,Perc):-
+				indexOf(List,Orig,I),
+				indexOf(List,Dest,K),IF is I + 1, KF is K + 1,
+				(slice(List,IF,KF,Perc);slice(List,KF,IF,Perc)),!.
+
+%menosTrocas('La Defense Grande Arche','Charles de Gaulle - Etoile',C,Trocas).
+%menosTrocas(Orig,Dest,Caminho,CTrocas):-(linha(_,X),member(Orig,X),member(Dest,X),innerList(Orig,Dest,X,Caminho),CTrocas is 0).
+
+maisRapido(Orig,Dest,Caminho):-maisRapido2(Dest,[[Orig]],Caminho).
+
+maisRapido2(Dest,[[Dest|T]|_],Cam):-reverse([Dest|T],Cam),escreverFicheiro('maisRapido.txt',Cam),!.
+
+maisRapido2(Dest,[[H|T]|Outros],Cam):-
+					findall([X,H|T],
+						(Dest\==H,
+							liga(_,H,X),
+							not(member(X,[H|T]))),
+						Novos),
+					append(Outros,Novos,Todos),
+					%write(Todos),nl,
+					maisRapido2(Dest,Todos,Cam).
 
 
-menosTrocas(Orig,Dest,Caminho,CTrocas):-(linha(_,X),member(Orig,X),member(Dest,X),innerList(Orig,Dest,X,Caminho),CTrocas is 0).
+menosTrocas(Orig,Dest,Caminho,CTrocas):-menosTrocas2(Dest,[[Orig]],Caminho,0,CTrocas).
+
+menosTrocas2(Dest,[[Dest|T]|_],Cam,_,_):-reverse([Dest|T],Cam),escreverFicheiro('menosTrocas.txt',Cam).
+
+menosTrocas2(Dest,[[H|T]|Outros],Cam,LAnterior,CTrocas):-
+					findall([X,H|T],
+						(Dest\==H,
+							liga(_,H,X),
+							not(member(X,[H|T]))),
+						Novos),
+					append(Outros,Novos,Todos),
+					%write(Todos),nl,
+					menosTrocas2(Dest,Todos,Cam,LAtual,CTrocasAtual).
+
+
+:-dynamic cruza/3, estacoes/1, estacao_linhas/2.
+% este gera_caminho é capaz de gerar o caminho entre duas estações que servem de cruzamento entre linhas.
+gera_caminho(E1,E2,LC):- 
+			estacao_linhas(E1,LE1),
+			estacao_linhas(E2,LE2),
+			caminho(E1, LE1, E2, LE2,[],LC).
+
+caminho(E1,LE1,E2,LE2,_,[(E1,E2,Linha)]):-
+				intersecao(LE1,LE2,LC),
+				member(Linha,LC),!.
+
+caminho(E1,LE1,E2,LE2,LLV,[(E1,EI,Linha)|LC]):-
+				member(Linha,LE1),
+				(not(member(Linha,LE1))),
+				cruza(Linha,_,L),
+				member(EI,L),
+				estacao_linhas(EI,LEI),
+				caminho(EI,LEI,E2,LE2,[Linha|LLV],LC).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 /*

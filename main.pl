@@ -11,3 +11,5 @@
 :- consult(geradores).
 :- gera_cruzamentos.
 :- gera_ligacoes.
+:- gera_estacoes.
+:- gera_estacoes_linhas.
