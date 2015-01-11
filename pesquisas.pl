@@ -170,12 +170,17 @@ maisRapido2(Dest,[[H|T]|Outros],Cam):-
 
 menosTrocas(Orig,Dest,Caminho,CTrocas):-menosTrocas2(Dest,[[Orig]],Caminho,0,CTrocas).
 
-menosTrocas2(Dest,[[Dest|T]|_],Cam,_,_):-reverse([Dest|T],Cam),escreverFicheiro('menosTrocas.txt',Cam).
+menosTrocas2(Dest,[[Dest|T]|_],Cam,_,_):-reverse([Dest|T],Cam),!,escreverFicheiro('menosTrocas.txt',Cam).
 
 menosTrocas2(Dest,[[H|T]|Outros],Cam,LAnterior,CTrocas):-
 					findall([X,H|T],
 						(Dest\==H,
-							liga(_,H,X),
+							(
+								liga(LAtual,H,X);
+								liga(LAtual,X,H)
+							),
+							LAtual \== LAnterior, 
+							CTrocasAtual is CTrocas+1,
 							not(member(X,[H|T]))),
 						Novos),
 					append(Outros,Novos,Todos),
@@ -188,8 +193,6 @@ visitaDiaInteiro(LPDI,Caminho):-visitaMeioDia2(LPDI,Caminho),!,escreverFicheiro(
 
 visitaMeioDia2(LPDI,Caminho):-
 		estacoesPDI(LPDI,Estacoes),
-		my_first(Orig,Estacoes),
-		my_last(Dest,Estacoes),
 		visitaMeioDia3(Estacoes,[],Caminho).
 
 visitaMeioDia3([_|[]],Caminho,Caminho).
