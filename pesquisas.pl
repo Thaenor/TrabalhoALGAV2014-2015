@@ -133,7 +133,6 @@ indexOf([_|Tail], Element, Index):-
 % slice(L1,I,K,L2) :- L2 is the list of the elements of L1 between
 %    index I and index K (both included).
 %    (list,integer,integer,list) (?,+,+,?)
-
 slice([X|_],1,1,[X]).
 slice([X|Xs],1,K,[X|Ys]) :- K > 1, 
    K1 is K - 1, slice(Xs,1,K1,Ys).
@@ -263,27 +262,3 @@ caminho(E1,LE1,E2,LE2,LLV,[(E1,EI,Linha)|LC]):-
 				member(EI,L),
 				estacao_linhas(EI,LEI),
 				caminho(EI,LEI,E2,LE2,[Linha|LLV],LC).
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-/*
-maisRapido(Origem,Destino,ListaTrajeto,CTempo):-.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-menorPercursoAPe(Origem,Destino,ListaTrajeto,CDistanciaAPe):-.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Funcionalidades Pontos de interesse
-
-%% 5. Visitas de meio dia / dia inteiro
-
-visitaMeioDia():-.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-visitaDiaInteiro():-.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% 6. Visita Circular (Origem = Destino)
-%%% LocalInicial - pode ser local de interesse ou estação de metro.
-visitaCircular(LocalInicial, HoraInicial, ListaLocais, NomeDoFicheiro):-.
-*/
